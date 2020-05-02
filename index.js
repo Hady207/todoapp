@@ -9,9 +9,9 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3000;
 // const DB = process.env.CLOUDDB || process.env.LOCALDB;
 // const DB = process.env.LOCALDB || process.env.CLOUDDB;
-const DBString = process.env.CLOUDDB.replace(
+const DB = process.env.DATABASE.replace(
   "<PASSWORD>",
-  process.env.DBPassword,
+  process.env.DATABASE_PASSWORD,
 );
 
 //setting the view template and serving the static files from public directory
@@ -28,7 +28,7 @@ app.use(methodOverride("_method"));
 
 // establshing a connection to the database
 mongoose
-  .connect(DBString, {
+  .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
