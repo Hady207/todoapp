@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav {
+  height: 7vh;
+  background: rgba(0, 0, 0, 0.842);
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+}
+
+.brand {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.brand::after {
+  content: "";
+  height: 49px;
+  display: inline-block;
+  width: 2px;
+  background-color: #d1d1d1;
+  margin-left: 8px;
+}
+
+.developer,
+.developer:link,
+.developer:visited {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 2rem;
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.container {
+  width: 43%;
+  height: 50%;
+  padding: 1rem;
+  background: #dddddd;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo:active {
+  transform: translateY(4px);
+}
+
+.todo:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.todo__body {
+  padding: 1rem;
+  font-size: 1.9rem;
+}
+
+/* .button:link,
+.button:visited {
+    text-decoration: none;
+    color: ;
+} */
+
+.button {
+  display: flex;
+}
+
+.button__edit,
+.button__delete {
+  font-size: 1.7rem;
+  /* margin-right: 1rem; */
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.button__edit>i {
+  margin-right: 1.5rem;
+  color: orange;
+}
+
+.button__delete>i {
+  margin-right: 1.2rem;
+  color: orangered;
+}
+
+.button__edit:link,
+.button__edit:visited {
+  margin-right: 1.5rem;
+  color: orange;
+}
+
+.button__delete:link,
+.button__delete:visited {
+  margin-right: 1.2rem;
+  color: orangered;
+}
+
+.button__add {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-top: 2rem;
+  border: 3px solid aqua;
+  padding: 0.5rem 1.3rem;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0px black;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+
+.button__add:hover {
+  background: aqua;
+  transform: translateY(-4px);
+}
+
+.button__add:active {
+  transform: translateY(0px);
+}
+
+.close__icon,
+.close__icon--edit {
+  outline: none;
+  position: absolute;
+  top: 22%;
+  left: 67%;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close__icon:hover,
+.close__icon--edit {
+  transform: rotate(19deg);
+}
+
+.form__container,
+.form__container--edit {
+  background: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  transform: scale(0.1);
+}
+
+.form__visiable {
+  visibility: visible;
+  transform: scale(1);
+}
+
+.form__add,
+.form__edit {
+  color: white;
+  width: 25%;
+  padding: 3rem;
+  background: #4caf50;
+  height: 26%;
+}
+
+.button__submit {
+  font-size: 2rem;
+  margin-top: 2rem;
+  border: 3px solid white;
+  padding: 0.5rem 1.3rem;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0px black;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  color: white;
+}
+
+.button__submit:hover {
+  background: white;
+  color: black;
+  transform: translateY(-4px);
+}
+
+.button__submit:active {
+  transform: translateY(0px);
+}
+
+.form-control {
+  font-size: 1.5rem;
+}
+
+.form__group {
+  display: flex;
+
+  margin-bottom: 1rem;
+}
+
+.form__group,
+label {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.todo__title {
+  width: 12rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav {
+    height: 10vh;
+  }
+
+  .form__add,
+  .form__edit {
+    width: 30%;
+    height: 39%;
+  }
+
+  .container {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .container {
+    width: 72%;
+    height: 34%;
+  }
+
+  .close__icon,
+  .close__icon--edit {
+    left: 84%;
+    position: absolute;
+    top: 22%;
+  }
+
+  .form__add,
+  .form__edit {
+    width: 84%;
+    height: 36%;
+  }
+
+  .developer,
+  .developer:link,
+  .developer:visited {
+    font-size: 1.9rem;
+  }
+}

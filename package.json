@@ -1,0 +1,24 @@
+{
+  "name": "talyaa-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch:js": "parcel watch ./public/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/index.js --out-dir ./public/js --out-file bundle.js"
+  },
+  "author": "Hadi Maher",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.10",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

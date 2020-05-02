@@ -1,0 +1,15 @@
+.form__container
+    button.close__icon
+        i.fas.fa-times-circle
+    form.form__add(action="/newtodo" method="post")
+        .form-group
+            
+        
+        .form-group
+            label(for="exampleFormControlInput1") Todo
+            textarea(class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            name="todo")
+        
+        input.button__submit(type="submit")

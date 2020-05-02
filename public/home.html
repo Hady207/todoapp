@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/fe8c66655f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>CRUD APP | Node</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="brand">Talyaa</div>
+      <a
+        href="https://www.linkedin.com/in/hadi-elrosol-0844a4191/"
+        class="developer"
+        >Hadi Maher</a
+      >
+    </nav>
+
+    <h1>Todo App</h1>
+    <main class="main">
+      <div class="container">
+        <!-- todo start here -->
+        <div class="todo">
+          <div class="todo__body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia,
+            dolores iste?
+          </div>
+          <div class="button">
+            <a href="" class="button button__edit"
+              ><i class="far fa-edit"></i
+            ></a>
+            <a href="" class="button button__delete"
+              ><i class="far fa-trash-alt"></i
+            ></a>
+          </div>
+        </div>
+        <!-- todo finish here -->
+      </div>
+      <a class="button__add">Add todo</a>
+    </main>
+
+    <div class="form__container">
+      <button class="close__icon">
+        <i class="fas fa-times-circle"></i>
+      </button>
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Title"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Todo</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <input class="button__submit" type="submit" />
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+extend base
+
+include _todo
+
+block content
+    main.main
+        .container
+            each t in todos
+                +todo(t.id,t.todo)
+        a.button__add add todo
+            

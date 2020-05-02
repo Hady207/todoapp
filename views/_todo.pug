@@ -1,0 +1,23 @@
+mixin todo(id,body)
+    .todo
+        .todo__body=body
+        .button
+            button(data-id=`${id}` class="button__edit")
+                i.far.fa-edit
+
+            form(action=`/delete/${id}?_method=DELETE` method="post")
+                button.button__delete(type="submit")
+                    i.far.fa-trash-alt
+    
+    //- .form__container--edit
+    //-     button.close__icon--edit
+    //-         i.fas.fa-times-circle
+    //-     form.form__edit
+    //-         .form-group
+    //-             label(for="exampleFormControlInput1") Todo
+    //-             textarea(class="form-control"
+    //-             id="exampleFormControlTextarea1"
+    //-             rows="3"
+    //-             name="todo")
+            
+    //-         input.button__submit( value="Edit" type="submit")
