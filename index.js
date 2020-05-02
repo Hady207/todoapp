@@ -6,9 +6,13 @@ const methodOverride = require("method-override");
 const todoRoute = require("./routes/todoRoutes");
 const app = express();
 const mongoose = require("mongoose");
-const port = process.env.port || 3000;
-const DB = process.env.CLOUDDB || process.env.LOCALDB;
+const PORT = process.env.PORT || 3000;
+// const DB = process.env.CLOUDDB || process.env.LOCALDB;
 // const DB = process.env.LOCALDB || process.env.CLOUDDB;
+const DBString = process.env.CLOUDDB.replace(
+  "<PASSWORD>",
+  process.env.DBPassword,
+);
 
 //setting the view template and serving the static files from public directory
 app.set("view engine", "pug");
@@ -24,7 +28,7 @@ app.use(methodOverride("_method"));
 
 // establshing a connection to the database
 mongoose
-  .connect(DB, {
+  .connect(DBString, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -37,4 +41,4 @@ mongoose
 app.use("/", todoRoute);
 
 // starting the server on the port 3000 or on heroku port
-app.listen(port, () => console.log("Server initated"));
+app.listen(PORT, () => console.log("Server initiated"));
